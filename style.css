@@ -1,0 +1,280 @@
+
+/* ALL VIEW */
+:root{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.containerMain{
+    background-color: white;
+    border-radius: 2rem;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.markAsRead{
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+}
+
+.markAsRead:hover{
+    color: var(--Blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.number{
+    font-size: 1.5rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    color: white;
+    background-color: var(--Blue);
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.containerNotifications{
+    height: auto;
+}
+
+.notification{
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: 2rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    
+}
+
+.notification1, .notification2, .notification3{
+    background-color: var(--Very-light-grayish-blue);
+
+}
+
+.avatar{
+    grid-area: 1/1/3/2;
+}
+
+.notificationAction{
+    color: grey;
+    grid-area: 1/2/2/3;
+    margin: 0px;
+}
+
+.name{
+    color: black;
+    font-weight: 800;
+}
+
+.name:hover{
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.grey{
+    color: grey;
+}
+
+.greyHighlight{
+    font-weight: 800;
+}
+
+.greyHighlight:hover{
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.avatar{
+    width: 3rem;
+    height: 3rem;
+}
+
+.notificationTime{
+    grid-area: 2/2/3/3;
+    color: grey;
+}
+
+.redDot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--Red);
+}
+
+.chessClub{
+    color: var(--Blue);
+    font-weight: 800;
+}
+
+.chessClub:hover{
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+/* SPECIAL NOTIFICATION RIZKY */
+.notificationRizky{
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: repeat(3, minmax(0.5 rem, 3rem));
+    margin-bottom: 0rem;
+}
+
+.avatarRizky{
+    width: 3rem;
+    height: 3rem;
+    grid-area: 1/1/3/2;
+    margin-top: 1rem;
+}
+
+.notificationActionRizky{
+    grid-area: 1/2/2/3;
+}
+
+.notificationTimeRizky{ 
+    grid-area: 2/2/3/3;
+    color: grey;
+    margin: 0px;
+}
+
+
+.notificationMessageRizky{
+    grid-area: 3/2/4/3;
+    color: var(--Grayish-blue);
+    height: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem; 
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 0.5rem;
+}
+
+.notificationMessageRizky:hover{
+    background-color: var(--Light-grayish-blue-2);
+    cursor: pointer;
+}
+
+
+/* SPECIAL NOTIFICATION KIMBERLY */
+.notificationKimberly{
+    display: grid;
+    grid-template-columns: 3rem auto auto;
+    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.avatarKimberly{
+    width: 3rem;
+    height: 3rem;
+    grid-area: 1/1/3/2;
+}
+
+.notificationActionKimberly{
+    grid-area: 1/2/2/3;
+}
+
+.notificationTimeKimberly{ 
+    grid-area: 2/2/3/3;
+    color: grey;
+}
+
+.imageChess{
+    width: 3rem;
+    height: 3rem;
+    grid-area: 1/3/3/4;
+}
+
+.imageChess:hover{
+    cursor: pointer;
+}
+
+
+/* MOBILE VIEW */
+@media screen and (max-width: 1000px){
+    .containerMain{
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .notificationTime{
+        margin-top: minmax(1rem 3rem);
+    }
+
+    .notificationKimberly{
+        grid-template-rows: 2.5rem 2.5rem;
+    }
+
+    .notification4{
+        grid-template-rows: 2.5rem 2.5rem;
+    }
+
+    .notificationActionNathan{
+        margin-bottom: 1rem;
+    }
+
+
+    .notificationMessageRizky{
+        max-width: 100%;
+    }
+
+}
+
+
+
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 1000px){
+    .containerMain{
+        width: 40rem;
+        margin: 2rem 22rem 2rem 22rem;
+        padding: 2rem;
+    }
+
+    .notificationTime{
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .notificationKimberly{
+        grid-template-rows: 1rem 1rem;
+    }   
+
+    .notification4{
+        grid-template-rows: 3rem 2rem;
+    }
+
+    .notificationMessageRizky{
+        max-width: 70%;
+        padding: 1rem;
+        
+    }
+
+
+}
